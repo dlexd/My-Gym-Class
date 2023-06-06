@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import WorkoutPage from './components/WorkoutPage';
-import WorkoutSplit from './components/workoutSpit';
+// import WorkoutSplit from './components/workoutSpit';
 
 const App = () => {
   return (
