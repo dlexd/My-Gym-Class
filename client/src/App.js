@@ -8,14 +8,14 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Home from './pages/Home';
-import Detail from './pages/Detail';
-import NoMatch from './pages/NoMatch';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Home from './components/Home';
+import Detail from './components/Detail';
+import NoMatch from './components/NoMatch';
+import Login from './components/Login';
+import Signup from './components/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
-import OrderHistory from './pages/OrderHistory';
+import OrderHistory from './components/OrderHistory';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
