@@ -1,63 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Stack } from '@mui/material';
 import { Auth } from '../../utils/auth';
 
-function Navbar() {
+import logo from '../../assets/logo.jpg';
+
+const Navbar = () => (
 
     function Navigation() {
         if (Auth.loggedIn()) {
             return (
-                <ul className="flex-row">
-                    <li className='mx-1'>
-                        <Link to="/exercise">
+                <Stack direction="row" justifyContent="space-around" sx={{ gap: {sm: '123px', xs: '40px'}, mt: { sm: '32px', xs: '20px'}, justifyContent: 'none'}} px="20px">
+                    <Link to="/">
+                        <img src={logo} alt="logo" style={{ width: '52px', height: '52px', margin: '0px 25px'}} />  
+                    </Link>
+                <Stack direction="row" gap="40px" fontFamily="Roboto" fontSize="32px" alignItems="flex-end"> 
+       
+                        <Link to="/exercise" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}}>
                             Exercise
                         </Link>
-                    </li>
-                    <li className="mx-1">
-                        <Link to="/nutrition">
+                        <Link to="/nutrition" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}}>
                             Nutrition
                         </Link>
-                    </li>
-                    <li className="mx-1">
-                        <a href="/" onClick={() => Auth.logout()}>
+                        <a href="/" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}} onClick={() => Auth.logout()}>
                             Logout
                         </a>
-                    </li>
-                </ul>
+                </Stack>
+            </Stack>
             );
         } else {
             return (
-                <ul className="flex-row">
-                    <li className="mx-1">
-                        <Link to="/signup">
+                <Stack direction="row" justifyContent="space-around" sx={{ gap: {sm: '123px', xs: '40px'}, mt: { sm: '32px', xs: '20px'}, justifyContent= 'none'}} px="20px">
+                    <Link to="/">
+                        <img src={Logo} alt="logo" style={{ width: '52px', height: '52px', margin: '0px 25px'}} />  
+                    </Link>
+                <Stack direction="row" gap="40px" fontFamily="Roboto" fontSize="32px" alignItems="flex-end"> 
+       
+                        <Link to="/signup" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}}>
                             Signup
                         </Link>
-                    </li>
-                    <li className="mx-1">
-                        <Link to="/login">
-                            Login
+                        <Link to="/login" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}}>
+                            login
                         </Link>
-                    </li>
-                </ul>
+                </Stack>
+            </Stack>
             );
         }
     }
-
-    return (
-        <header className="flex-row px-1">
-            <h1>
-                <Link to="/">
-                    <span role="img" aria-label="fitness">🏋️‍♂️</span>
-                    TEMPORARY NAME
-                </Link>
-            </h1>
-
-            <nav>
-                <Navigation />
-            </nav>
-        </header>
-    );
-}
+);
 
 export default Navbar;
 
