@@ -22,6 +22,9 @@ const Navbar = () => (
                         <Link to="/nutrition" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}}>
                             Nutrition
                         </Link>
+                        <Link to="/subscrie" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}}>
+                            Subscribe for more!
+                        </Link>
                         <a href="/" style={{ textDecoration: 'none', color: '#2a90e3', borderBottom: '4px solid #2a62e3'}} onClick={() => Auth.logout()}>
                             Logout
                         </a>
