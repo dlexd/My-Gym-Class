@@ -15,8 +15,8 @@ const WorkoutForm = () => {
     const obtainAccessToken = async () => {
       try {
         const response = await api.post('/token/', {
-          username: 'Derrekle@gmail.com',
-          password: 'bootcamp123',
+          username: process.env.REACT_APP_NOT_USERNAME,
+          password: process.env.REACT_APP_NOT_PASSWORD,
         });
         const { access } = response.data;
         setAccessToken(access);
