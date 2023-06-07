@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Calendar from './Calendar';
 import ExerciseList from './ExerciseList';
 import WorkoutDetail from './WorkoutDetail';
 import WorkoutForm from './WorkoutForm';
